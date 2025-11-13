@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 33
+names: ['01', '01010', '012', '012345', '02', '05', 'a', 'b', 'c', 'd', 'e', 'el', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+roboflow:
+  workspace: morningstar-xdqsq
+  project: braille-detection-xfcsw
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/morningstar-xdqsq/braille-detection-xfcsw/dataset/2
