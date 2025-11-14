@@ -1,3 +1,15 @@
-flask
-ultralytics
-pillow
+# --- Framework Backend ---
+Flask==3.0.2
+Flask-Cors==4.0.0
+gunicorn==21.2.0  # Para producción en AWS EC2 o contenedores
+
+# --- YOLOv8 / Ultralytics ---
+ultralytics==8.2.103
+
+# --- Procesamiento de Imágenes ---
+Pillow==10.3.0
+opencv-python-headless==4.10.0.84   # Versión sin GUI (ideal para servidores)
+numpy==1.26.4
+
+# --- Utilidades ---
+python-dotenv==1.0.1
