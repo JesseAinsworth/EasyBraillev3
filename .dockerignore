@@ -1,0 +1,37 @@
+﻿# Dataset (no necesario en producción)
+dataset/
+dataset_backup*/
+
+# Archivos de entrenamiento
+train.py
+train_improved.py
+yolov8n.pt
+
+# Directorios temporales
+uploads/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Análisis
+ANALISIS_PESO.txt
