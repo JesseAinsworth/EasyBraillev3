@@ -35,8 +35,8 @@ COPY runs/ ./runs/
 # Crear directorio para uploads
 RUN mkdir -p uploads
 
-# Exponer puerto
-EXPOSE 5000
+# Exponer puerto (Render usa PORT env var, por defecto 10000)
+EXPOSE 10000
 
-# Comando de inicio con 1 worker y timeout largo
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "1", "--threads", "2", "--timeout", "120", "--worker-class", "sync", "--max-requests", "100", "--max-requests-jitter", "10", "--access-logfile", "-", "--error-logfile", "-", "app:app"]
+# Comando de inicio - usar variable PORT de Render
+CMD gunicorn --bind 0.0.0.0:${PORT:-10000} --workers 1 --threads 2 --timeout 120 --worker-class gthread --max-requests 100 --max-requests-jitter 10 --access-logfile - --error-logfile - app:app
