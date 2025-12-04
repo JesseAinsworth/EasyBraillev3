@@ -8,6 +8,13 @@ import numpy as np
 import uuid
 from werkzeug.utils import secure_filename
 
+# Descargar modelo si no existe
+try:
+    import download_model
+    download_model.download_model()
+except Exception as e:
+    print(f"Advertencia al descargar modelo: {e}")
+
 app = Flask(__name__)
 CORS(app)
 
